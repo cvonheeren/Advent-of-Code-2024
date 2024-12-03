@@ -6,12 +6,10 @@ xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
 def cleanedString = new StringBuilder()
 def flag = 0
 for (int i = 0; i < largeString.size(); i++) {
-    if (largeString[i] == 'd') {
-        if (i <= largeString.size() - 7 && list[i..i + 6].equals("don't()")) {
-            flag = 1;
-            i += 6
-            continue
-        }
+    if (i <= largeString.size() - 7 && list[i..i + 6].equals("don't()")) {
+        flag = 1;
+        i += 6
+        continue
     }
     if (i <= largeString.size() - 4 && largeString[i..i + 3] == "do()") {
         flag = 0
