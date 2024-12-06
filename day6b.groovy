@@ -76,10 +76,10 @@ class Limits {
                 }     
             }
             grid[pos[0]][pos[1]] = 'X'
-    }
+        }
 
-    return trappedCount
-}
+        return trappedCount
+    }
 
     boolean walk(int x, int y, int dx, int dy) {
         int newX = x + dx
@@ -123,18 +123,6 @@ class Limits {
             guard = "v"
         }
     }
-
-    int countMarks() {
-        int count = 0
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
-                if (grid[row][col] == 'X') {
-                    count++
-                }
-            }
-        }
-        return count
-    }
     
     void reset(){
         this.grid = original.collect { it.collect { it } }
@@ -157,6 +145,5 @@ def input = """
 """
 
 def grid = input.trim().split('\n').collect{ it.toList() }
-//println grid
 def myGame = new Limits(grid)
 println myGame.play()
