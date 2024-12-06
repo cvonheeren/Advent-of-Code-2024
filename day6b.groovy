@@ -43,9 +43,7 @@ class Limits {
         return position
     }
 
-    int play() {
-        def markedPositions = []
-        
+    int play() {        
         while (true) {
             if (!walk(startPosition[0], startPosition[1], actualDir[0], actualDir[1])) {
                 break;
@@ -82,8 +80,6 @@ class Limits {
 
     return trappedCount
 }
-
-
 
     boolean walk(int x, int y, int dx, int dy) {
         int newX = x + dx
